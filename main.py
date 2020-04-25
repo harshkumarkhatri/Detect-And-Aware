@@ -2,8 +2,8 @@ import cv2
 import nexmo
 
 # Nexmo messaging
-client = nexmo.Client(key='20cef142', secret='s8Y1EOuOYAcc3SlP')
-number = +916376840832
+client = nexmo.Client(key='Your nexmo key', secret='Your nexmo secret key')
+number = "your phone number with the country code"
 message = "Pigeons have entered your farm"
 
 
