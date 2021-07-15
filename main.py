@@ -1,8 +1,8 @@
 import cv2
-import nexmo
+# import nexmo
 
 # Nexmo messaging
-client = nexmo.Client(key='Your nexmo key', secret='Your nexmo secret key')
+# client = nexmo.Client(key='Your nexmo key', secret='Your nexmo secret key')
 number = "your phone number with the country code"
 message = "Pigeons have entered your farm"
 
@@ -16,17 +16,17 @@ count = 0
 
 # Detecting the birds
 while running:
-    if count == 1:
-        response = client.send_message({
-            'from': 'GYMAALE',
-            'to': number,
-            'text': message,
-        })
-        response = response['messages'][0]
-        if response['status'] == '0':
-            print("MESSAGE DELIVERED SUCCESSFULLY", response['message-id'])
-        else:
-            print("ERROR SENDING MESSAGE", response['error-text'])
+    # if count == 1:
+    #     # response = client.send_message({
+    #     #     'from': 'GYMAALE',
+    #     #     'to': number,
+    #     #     'text': message,
+    #     # })
+    #     # response = response['messages'][0]
+    #     # if response['status'] == '0':
+    #     #     print("MESSAGE DELIVERED SUCCESSFULLY", response['message-id'])
+    #     # else:
+    #     #     print("ERROR SENDING MESSAGE", response['error-text'])
     count += 1
     ret, frame = cap.read()
     print("Ret is ", ret)
